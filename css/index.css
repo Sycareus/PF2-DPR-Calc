@@ -1,0 +1,63 @@
+/* Webkit : hide input[number] ugly arrows*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    margin: 0; 
+}
+
+/* Firefox : hide input[number] ugly arrows*/
+input[type=number] {
+    -moz-appearance:textfield; 
+} 
+
+/* Form control */
+
+input[type=number]:invalid {
+    border: 1px solid hsl(348, 86%, 61%);
+    z-index: 100;
+}
+
+input[type=text]:invalid {
+    border: 1px solid hsl(348, 86%, 61%);
+    z-index: 100;
+}
+
+ /* Bulma overrides */
+
+input {
+    text-align: center;
+}
+
+.fw-buttons {
+    display: flex;
+}
+
+.fw-buttons .button {
+    flex: 1;
+}
+
+.columns {
+    margin-top : 0rem;
+}
+
+.field-label {
+    text-align: left; 
+}
+
+/* Sticky footer in flex from https://github.com/jgthms/bulma/issues/47#issuecomment-285078785 */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+    flex: 1 0 0;
+}
+
+.divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
